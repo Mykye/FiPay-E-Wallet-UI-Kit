@@ -1,13 +1,30 @@
-import React from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+type Props = {
+    image: ImageSourcePropType,
+    text: string,
+    time: string,
+    button?: boolean,
+    onPress?: (event: GestureResponderEvent) => void
+}
 
-const NotificationBody = ({
-                              image=require('../../assets/images/notification/Image.png'),
-                              text='You received a payment of $450.00 from Grace Anastasia',
-                              time='10.10 AM',
-                              button=false,
-                              onPress
-}) => {
+import React from 'react';
+import {
+    GestureResponderEvent,
+    Image,
+    ImageSourcePropType,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View
+} from "react-native";
+import RNGestureHandlerButton from "react-native-gesture-handler/lib/typescript/components/GestureHandlerButton";
+
+const NotificationBody = (props: Props) => {
+    const {onPress} = props;
+    const {image} = props;
+    const {text} = props;
+    const {time} = props;
+    const {button} = props;
+
     return (
         <View>
             <View style={styles.container}>

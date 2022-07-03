@@ -15,6 +15,30 @@ const Settings = ({navigation}) => {
         setBottomSheet(true)
     }
 
+    const onPressNotification = () => {
+        navigation.navigate('NotSettings');
+    }
+
+    const onPressSecurity = () => {
+        navigation.navigate('Security');
+    }
+
+    const onPressServices = () => {
+        navigation.navigate('Services');
+    }
+
+    const onPressCurrency = () => {
+        navigation.navigate('Currency');
+    }
+
+    const onPressMyCards = () => {
+        navigation.navigate('MyCards');
+    }
+
+    const onPressAccount = () => {
+        navigation.navigate('Profiles');
+    }
+
     const logOut = () => {
         navigation.navigate('Intro');
     }
@@ -25,16 +49,16 @@ const Settings = ({navigation}) => {
                     <TouchableOpacity onPress={() => {navigation.navigate('Profile')}}>
                         <MaterialCommunityIcons name="arrow-left" color={'black'} size={30} />
                     </TouchableOpacity>
-                    <Text style={{fontWeight: '600', fontSize: 23, lineHeight: 34, color: 'black', marginLeft: 16}}>{'Account'}</Text>
+                    <Text style={{fontWeight: '600', fontSize: 23, lineHeight: 34, color: 'black', marginLeft: 16}}>{'Settings'}</Text>
                 </View>
             </View>
             <ScrollView style={{flex: 1}}>
-                <SettingsItem icon={require('../../assets/images/settings/Icon.png')} text={'Account'} />
-                <SettingsItem icon={require('../../assets/images/settings/Icon2.png')} text={'Notification'}/>
-                <SettingsItem icon={require('../../assets/images/settings/Icon3.png')} text={'My Card'}/>
-                <SettingsItem icon={require('../../assets/images/settings/Icon4.png')} text={'Security'}/>
-                <SettingsItem icon={require('../../assets/images/settings/Icon5.png')} text={'Currency'}/>
-                <SettingsItem icon={require('../../assets/images/settings/Icon6.png')} text={'Services'}/>
+                <SettingsItem icon={require('../../assets/images/settings/Icon.png')} text={'Account'} onPress={onPressAccount}/>
+                <SettingsItem icon={require('../../assets/images/settings/Icon2.png')} text={'Notification'} onPress={onPressNotification}/>
+                <SettingsItem icon={require('../../assets/images/settings/Icon3.png')} text={'My Card'} onPress={onPressMyCards}/>
+                <SettingsItem icon={require('../../assets/images/settings/Icon4.png')} text={'Security'} onPress={onPressSecurity}/>
+                <SettingsItem icon={require('../../assets/images/settings/Icon5.png')} text={'Currency'} onPress={onPressCurrency}/>
+                <SettingsItem icon={require('../../assets/images/settings/Icon6.png')} text={'Services'} onPress={onPressServices}/>
                 <SettingsItem icon={require('../../assets/images/settings/Icon7.png')} text={'Logout'} onPress={onPressLogOut}/>
             </ScrollView>
             <BottomSheet
@@ -62,7 +86,7 @@ export default Settings;
 const styles = StyleSheet.create({
     container: {
         padding: 20,
-        paddingTop: 70,
+        paddingTop: 60,
         flex: 1,
     },
     header: {

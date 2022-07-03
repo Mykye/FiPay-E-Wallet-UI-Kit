@@ -1,7 +1,7 @@
 import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 
-const Bill = ({billName, date='December 28, 2021', icon=require('../../assets/images/billIcons/Icon.png'), forStatistic= true, money='100.00'} ) => {
+const Bill = ({billName = '', date='December 28, 2021', icon=require('../../assets/images/billIcons/Icon.png'), forStatistic= true, money='100.00'} ) => {
     return (
         <View style={{marginTop: 20}}>
             <View style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>

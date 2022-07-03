@@ -13,6 +13,12 @@ import ForgotPassword from "./forgotPassword";
 import NewPassword from "./NewPassword";
 import Tabs from "../app/tabs";
 import Settings from '../settings/settings'
+import NotificationSettings from "../settings/notificationSettings/NotificationSettings";
+import Security from "../settings/securitySettings/Security";
+import ServicesSettings from "../settings/servicesSettings/servicesSettings";
+import Currency from "../settings/currencySettings/currency";
+import MyCards from "../settings/myCardsSettings/myCards";
+import Profiles from "../settings/profiles/profiles";
 
 const Stack = createNativeStackNavigator();
 
@@ -33,7 +39,13 @@ function LogInNavigation() {
                     <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
                     <Stack.Screen name="NewPassword" component={NewPassword} />
                     <Stack.Screen name="Tabs" component={Tabs} />
-                    <Stack.Screen name="Sittings" component={Settings}/>
+                    <Stack.Screen name="Settings" component={Settings}/>
+                    <Stack.Screen name="NotSettings" component={NotificationSettings}/>
+                    <Stack.Screen name="Security" component={Security}/>
+                    <Stack.Screen name="Services" component={ServicesSettings}/>
+                    <Stack.Screen name="Currency" component={Currency}/>
+                    <Stack.Screen name="MyCards" component={MyCards}/>
+                    <Stack.Screen name="Profiles" component={Profiles}/>
                 </Stack.Navigator>
             </NavigationContainer>
     );

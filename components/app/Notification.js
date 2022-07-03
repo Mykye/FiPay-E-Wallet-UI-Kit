@@ -28,7 +28,7 @@ const Notification = ({navigation}) => {
             </View>
             <ScrollView style={{flex: 1}}>
                 <Text style={styles.day}>{'Today'}</Text>
-                <NotificationBody />
+                <NotificationBody text={'AYou received a payment of $300.00 from Daniel Munick'} time={'06.33 AM'} image={require('../../assets/images/notification/Image.png')} button={false} onPress={onPressPay}/>
                 <NotificationBody text={'Andrew Munick requested a payment of $300.00'} time={'09.50 AM'} image={require('../../assets/images/notification/Image2.png')} button={true} onPress={onPressPay}/>
                 <Text style={styles.day}>{'Yesterday'}</Text>
                 <NotificationBody text={'You received a payment of $450.00 from Daniel McKiney'} time={'10.25 AM'} image={require('../../assets/images/notification/Image3.png')}/>

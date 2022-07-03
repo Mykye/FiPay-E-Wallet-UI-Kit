@@ -1,7 +1,7 @@
 import React from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {GestureResponderEvent, Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 
-const SettingsItem = ({icon=require('../../assets/images/settings/Icon.png'), text, onPress}) => {
+const SettingsItem = ({icon=require('../../assets/images/settings/Icon.png'), text= '', onPress = (event: GestureResponderEvent) => {} }) => {
     return (
         <View>
             <TouchableOpacity style={styles.container} onPress={onPress}>

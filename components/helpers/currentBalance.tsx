@@ -1,7 +1,11 @@
+interface Props  {
+    navigation: {}
+}
 import React from 'react';
 import {Image, StyleSheet, Text, View} from "react-native";
 
-const CurrentBalance = ({navigation}) => {
+const CurrentBalance = (props: Props) => {
+    const {navigation} = props;
     return (
         <View style={styles.page}>
             <View style={styles.top}>

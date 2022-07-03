@@ -3,7 +3,6 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import {MaterialCommunityIcons} from "@expo/vector-icons";
 import Animated ,{Easing, useAnimatedStyle, useSharedValue, withRepeat, withTiming} from "react-native-reanimated";
 
-
 const ProfilePage = ({navigation}) => {
 
     return (
@@ -17,7 +16,7 @@ const ProfilePage = ({navigation}) => {
                             </TouchableOpacity>
                             <Text style={{fontWeight: '600', fontSize: 23, lineHeight: 34, color: 'white', marginLeft: 16}}>{'Account'}</Text>
                         </View>
-                        <TouchableOpacity onPress={() => {navigation.navigate('Sittings')}}>
+                        <TouchableOpacity onPress={() => {navigation.navigate('Settings')}}>
                             <MaterialCommunityIcons name="menu" color={'white'} size={30}/>
                         </TouchableOpacity>
                     </View>
